@@ -9,6 +9,13 @@ ikonunun (masaüstü / dosya gezgini) güvenilir biçimde gömülmesini sağlar.
 
 block_cipher = None
 
+import os
+SPEC_DIR = os.path.dirname(os.path.abspath(SPEC))
+ICON_PATH = os.path.join(SPEC_DIR, 'assets', 'icon.ico')
+# Build sırasında ikon bulunamazsa logda açıkça görünsün
+if not os.path.exists(ICON_PATH):
+    raise SystemExit(f"HATA: ikon bulunamadi -> {ICON_PATH}")
+
 a = Analysis(
     ['main.py'],
     pathex=[],
@@ -44,7 +51,7 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,
     upx_exclude=[],
     runtime_tmpdir=None,
     console=False,
@@ -53,5 +60,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='assets/icon.ico',
+    icon=ICON_PATH,
 )
