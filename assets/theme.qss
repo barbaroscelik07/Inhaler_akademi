@@ -1,0 +1,178 @@
+/* ============================================================
+   İnhaler APSD Akademi — Sade Modern Klinik Tema
+   Palet:
+     Zemin       #FFFFFF
+     Yüzey       #F5F7FA
+     Kenar       #E2E8F0
+     Metin       #1F2933
+     İkincil     #52606D
+     Vurgu       #0E7C86  (klinik teal)
+     Vurgu-koyu  #0A5C63
+     Uyarı       #C2410C
+   ============================================================ */
+
+QWidget {
+    background-color: #FFFFFF;
+    color: #1F2933;
+    font-family: "Segoe UI", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+#pageTitle {
+    font-size: 26px;
+    font-weight: 600;
+    color: #0A5C63;
+}
+
+/* ---------- Sidebar ---------- */
+#sidebar {
+    background-color: #F5F7FA;
+    border-right: 1px solid #E2E8F0;
+    min-width: 260px;
+    max-width: 260px;
+}
+
+#sidebarHeader {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0E7C86;
+    padding: 18px 18px 4px 18px;
+}
+
+#sidebarSub {
+    font-size: 11px;
+    color: #52606D;
+    padding: 0 18px 12px 18px;
+}
+
+#deviceLabel {
+    font-size: 11px;
+    font-weight: 600;
+    color: #52606D;
+    padding: 8px 18px 2px 18px;
+}
+
+QListWidget#navList {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 6px 8px;
+}
+
+QListWidget#navList::item {
+    padding: 9px 12px;
+    border-radius: 8px;
+    color: #3E4C59;
+    margin: 1px 0;
+}
+
+QListWidget#navList::item:hover {
+    background-color: #E6EEF0;
+}
+
+QListWidget#navList::item:selected {
+    background-color: #0E7C86;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* ---------- Cihaz seçici (segmented) ---------- */
+QPushButton#deviceBtn {
+    background-color: #FFFFFF;
+    border: 1px solid #CBD2D9;
+    border-radius: 7px;
+    padding: 6px 4px;
+    color: #3E4C59;
+    font-size: 12px;
+}
+
+QPushButton#deviceBtn:checked {
+    background-color: #0E7C86;
+    border-color: #0E7C86;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* ---------- İçerik / kartlar ---------- */
+#card {
+    background-color: #F5F7FA;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+}
+
+QLabel#sectionLead {
+    font-size: 14px;
+    color: #3E4C59;
+    line-height: 150%;
+}
+
+QLabel#metricValue {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0E7C86;
+}
+
+QLabel#metricLabel {
+    font-size: 11px;
+    color: #52606D;
+}
+
+/* ---------- Slider ---------- */
+QSlider::groove:horizontal {
+    height: 4px;
+    background: #CBD2D9;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background: #0E7C86;
+    width: 16px;
+    height: 16px;
+    margin: -7px 0;
+    border-radius: 8px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #0E7C86;
+    border-radius: 2px;
+}
+
+/* ---------- Scrollbar ---------- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #CBD2D9;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #9AA5B1;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ---------- Kavram sayfası ek stilleri ---------- */
+QLabel#bulletItem {
+    font-size: 13.5px;
+    color: #3E4C59;
+    padding: 1px 0 1px 4px;
+}
+
+QLabel#deviceNoteTitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0E7C86;
+}
+
+#visualPanel {
+    background-color: #FFFFFF;
+    border-left: 1px solid #E2E8F0;
+}
