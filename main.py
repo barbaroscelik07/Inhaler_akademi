@@ -10,7 +10,7 @@ Designed by Barbaros Çelik
 import os
 import sys
 
-from PyQt6.QtGui import QFont
+from PyQt6.QtGui import QFont, QIcon
 from PyQt6.QtWidgets import (
     QApplication,
     QHBoxLayout,
@@ -35,10 +35,20 @@ def load_stylesheet() -> str:
     return ""
 
 
+def app_icon() -> QIcon:
+    """Çok-çözünürlüklü uygulama ikonu (.ico tercih, .png yedek)."""
+    for name in ("icon.ico", "icon_256.png", "icon.svg"):
+        path = os.path.join(BASE_DIR, "assets", name)
+        if os.path.exists(path):
+            return QIcon(path)
+    return QIcon()
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("İnhaler APSD Akademi")
+        self.setWindowIcon(app_icon())
         self.resize(1320, 820)
 
         central = QWidget()
@@ -75,6 +85,7 @@ class MainWindow(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
+    app.setWindowIcon(app_icon())
     app.setFont(QFont("Segoe UI", 10))
     app.setStyleSheet(load_stylesheet())
     win = MainWindow()

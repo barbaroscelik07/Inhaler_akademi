@@ -50,7 +50,7 @@ class RelationshipMap(MplCanvas):
 
     def update_plot(self, mmad, gsd, total_dose=1000.0):
         r = compute_apsd(mmad, gsd, total_dose)
-        self.ax.clear()
+        self.clear()
         self.ax.set_xlim(0, 10)
         self.ax.set_ylim(0, 10)
         self.ax.axis("off")

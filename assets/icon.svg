@@ -1,0 +1,65 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16205C"/>
+      <stop offset="1" stop-color="#0C1440"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE14D"/>
+      <stop offset="1" stop-color="#FFC400"/>
+    </linearGradient>
+    <radialGradient id="plume" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#FFE14D" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFC400" stop-opacity="0.10"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Lacivert yuvarlak kare zemin -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bg)"/>
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="none"
+        stroke="#FFC400" stroke-width="6" stroke-opacity="0.35"/>
+
+  <!-- Aerosol partikül saçılımı (APSD dağılımı) -->
+  <g>
+    <!-- Partiküller: ağızlıktan çıkıp yayılan, büyükten küçüğe -->
+    <circle cx="232" cy="214" r="18" fill="url(#gold)"/>
+    <circle cx="278" cy="166" r="15" fill="url(#gold)"/>
+    <circle cx="248" cy="120" r="11" fill="url(#gold)"/>
+    <circle cx="320" cy="132" r="13" fill="url(#gold)"/>
+    <circle cx="316" cy="196" r="10" fill="url(#gold)"/>
+    <circle cx="372" cy="158" r="11" fill="url(#gold)"/>
+    <circle cx="384" cy="216" r="8" fill="url(#gold)"/>
+    <circle cx="426" cy="180" r="8" fill="url(#gold)"/>
+    <circle cx="356" cy="110" r="7" fill="url(#gold)"/>
+    <circle cx="414" cy="128" r="6" fill="url(#gold)"/>
+    <circle cx="446" cy="220" r="5" fill="url(#gold)"/>
+    <circle cx="288" cy="232" r="6" fill="url(#gold)"/>
+  </g>
+
+  <!-- Stilize inhaler / nebülizer gövdesi -->
+  <g>
+    <!-- Ağızlık (üst, partiküllerin çıktığı yön) -->
+    <path d="M150 250
+             L196 250
+             L210 300
+             L136 300 Z"
+          fill="url(#gold)"/>
+    <!-- Gövde (lacivert üzerine sarı kontur, kanister) -->
+    <rect x="150" y="300" width="120" height="150" rx="26"
+          fill="#1B2A6B" stroke="url(#gold)" stroke-width="12"/>
+    <!-- Doz göstergesi şeridi -->
+    <rect x="178" y="338" width="64" height="14" rx="7" fill="url(#gold)"/>
+    <rect x="178" y="368" width="64" height="14" rx="7" fill="#FFC400" fill-opacity="0.55"/>
+    <rect x="178" y="398" width="44" height="14" rx="7" fill="#FFC400" fill-opacity="0.30"/>
+  </g>
+
+  <!-- Alt: APSD profilini çağrıştıran mini bar dağılımı -->
+  <g fill="url(#gold)">
+    <rect x="300" y="408" width="16" height="22" rx="3"/>
+    <rect x="322" y="392" width="16" height="38" rx="3"/>
+    <rect x="344" y="374" width="16" height="56" rx="3"/>
+    <rect x="366" y="388" width="16" height="42" rx="3"/>
+    <rect x="388" y="404" width="16" height="26" rx="3"/>
+    <rect x="410" y="416" width="16" height="14" rx="3"/>
+  </g>
+</svg>

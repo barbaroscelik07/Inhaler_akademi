@@ -44,5 +44,8 @@ class MplCanvas(FigureCanvasQTAgg):
         self.ax.title.set_color(INK)
 
     def clear(self):
+        # Figure seviyesindeki yazıları (fig.text) da temizle; aksi halde
+        # her güncellemede birikip üst üste binerler.
+        self.fig.texts.clear()
         self.ax.clear()
         self._style_axes()
